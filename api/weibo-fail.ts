@@ -8,7 +8,7 @@ module.exports = async (req: VercelRequest, res: VercelResponse) => {
   const REDIRECT_URI = "https://weibo-server.vercel.app/api/weibo-success";
 
   console.log(code);
-  axios.get(`https://api.weibo.com/oauth2/access_token?client_id=${APP_KEY}&client_secret=${APP_SECRET}&grant_type=authorization_code&redirect_uri=${REDIRECT_URI}&code=${code}`)
+  axios.post(`https://api.weibo.com/oauth2/access_token?client_id=${APP_KEY}&client_secret=${APP_SECRET}&grant_type=authorization_code&redirect_uri=${REDIRECT_URI}&code=${code}`)
     .then((data) => {
         res.status(200).json(data.data);
     })
