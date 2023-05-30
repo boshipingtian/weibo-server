@@ -4,8 +4,8 @@ module.exports = async (req: VercelRequest, res: VercelResponse) => {
   const { code } = req.query;
 
   const APP_KEY = "238819347";
-  const APP_SECRET = "f3123c83a224da30f935225bce5738f9";
-  const REDIRECT_URI = "http://weibo-server.vercel.app/api/weibo-success";
+  const APP_SECRET = "c21ff0824ac9f2b5320cc512faf9d586";
+  const REDIRECT_URI = "https://weibo-server.vercel.app/api/weibo-success";
 
   console.log(code);
   axios.get(`https://api.weibo.com/oauth2/access_token?client_id=${APP_KEY}&client_secret=${APP_SECRET}&grant_type=authorization_code&redirect_uri=${REDIRECT_URI}&code=${code}`)
