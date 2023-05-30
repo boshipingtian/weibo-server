@@ -4,9 +4,14 @@
             "handle": "filesystem"
         },
         {
-            "src": "/(.*)",
+            "src": "/",
             "status": 404,
             "dest": "/index.html"
+        },
+        {
+            "src": "/wb_4bd9d3bc04739cff.txt",
+            "status": 404,
+            "dest": "/wb_4bd9d3bc04739cff.txt"
         }
     ]
 }
